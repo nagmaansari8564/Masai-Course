@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+
+    <style>
+
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+        #main{
+            width: 81%;
+            height: 500px;
+            border: 0px solid red;
+            margin: auto;
+            display: flex;
+            margin-top: 30px;
+
+        }
+        #main>.inside{
+            width: 29%;
+            height: 95%;
+            border: 0px solid blue;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                       
+        }
+       
+        #main>.inside>.moh{
+            width: 95%;
+            height: 42%;
+            border: 0px solid green;
+            margin: auto;
+
+        }
+
+        #main>.inside>.nag{
+            width: 85%;
+            height: 49%;
+            border: 0px solid green;
+            margin: auto;font-family:Sans,sans-serif ;
+            font-size: 18px;
+            margin-top: 40px;
+            
+        }
+        
+
+           
+        #main>.inside>.moh>img{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+                        
+        }
+
+        #main>.inside>.nag>p:nth-child(1){
+            color: #3470E4;
+        }
+        .flex-parent {
+         display: flex;
+         margin-top: 50px;
+        
+         }
+
+        .jc-center {
+         justify-content: center;
+         }
+         button{
+            width: 130px;
+            height: 50px;
+            color: red;
+            border-radius: 5px;
+            border:1px solid red
+         }
+         #outer{
+            width: 85%;
+            height: 160px;
+            border: 0px solid black;
+            margin: auto;
+            display: flex;
+          
+         }
+         #outer>.abc{
+            width: 31%;
+            height:95%;
+            border: 0px solid #544D4F ;
+            margin: auto;
+            border-radius: 10px;
+         }
+         #outer>.abc>img{
+            width: 100%;
+            height: 100%;
+         }
+       
+    </style>
+</head>
+<body>
+    <h1>Masai In The News</h1>
+    <div id="main">
+        <div class="inside">
+            
+           <div class="moh">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png"/></div>
+            <div class="nag">
+            <p>21 Dec 2021</p>
+            <h4>EDtech startup Masai school aquirs data analitics firm prepleaf for $1 Million<h4>
+            <p style=" color: #544D4F;font-size: 17px;">with their latest aquisitions , masai moves on step closer to becoming...</p>
+        </div></div>
+        <div class="inside">
+            <div class="moh">
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/money_Control_c3e25f5ceb.png"/></div>
+                <div class="nag">
+                <p>26 Oct 2021</p>
+                <h4>EDtech startup Masai school aquirs data analitics firm prepleaf for $1 Million<h4>
+                <p style=" color: #544D4F;font-size: 17px;">with their latest aquisitions , masai moves on step closer to becoming...</p>
+            </div>
+        </div>
+        <div class="inside">
+            <div class="moh">
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/vccircle_6ef779c958.png"/></div>
+                <div class="nag">
+                <p>18 Aug 2020</p>
+                <h4>EDtech startup Masai school aquirs data analitics firm prepleaf for $1 Million<h4>
+                <p style=" color: #544D4F;font-size: 17px;">with their latest aquisitions , masai moves on step closer to becoming...</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-parent jc-center">
+        <button>SEE MORE ></button>
+      </div>
+      <h1 style="margin-top:100px">Our Investors, Who Believe In Us</h1>
+      <div id="outer">
+        <div class="abc">
+            <img src="https://www.masaischool.com/img/our-investors/unitus.svg"/>
+        </div>
+        <div class="abc">
+        <img src="https://www.masaischool.com/img/our-investors/omidyar.svg"/>
+        </div>
+        <div class="abc">
+            <img src="https://www.masaischool.com/img/our-investors/indiaQuotient.svg"/>
+        </div>
+      </div>
+</body>
+</html>
