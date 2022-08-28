@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Show">Show entered name</h1>
+    <input id="userName" type="text" placeholder="Enter name" value="">
+    <button onClick="GetUserName()">get Name</button>
+</body>
+</html>
+
+<script>
+       function GetUserName(){
+       let name= document.getElementById("userName").value;
+       document.getElementById("Show").innerText=name;
+       console.log(name);
+       }
+
+</script>

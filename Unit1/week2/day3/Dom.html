@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <P id="para">Click on login to continue</P>
+    <button onClick="login()">Login</button>
+    <button onClick="logOut()">Logout</button>
+</body>
+</html>
+<script>
+     function login(){
+        document.getElementById("para").innerText="Login successful";
+     }
+     function logOut(){  
+        document.getElementById("para").innerText="Logout successful";
+     }
+</script>
