@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+        #calculator{
+        width: 30%;
+        height: 500px;
+        border: 0px solid red;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        padding-top: 20px;
+        border-radius: 20px;
+
+    }
+    #display{
+        width: 75%;
+        height: 60px;
+        border: 0px solid red;
+        margin: auto;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        
+    }
+    #keybord{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,75px);
+        gap:20px;
+        width: 75%;
+        margin: auto;
+        margin-top: 15px;
+    }
+    #keybord>div{
+        border: 0px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .black{
+        color: white;
+        background-color: black;
+    }
+    #red{
+        background-color: red;
+        color: white;
+    }
+    #keybord>div:hover{
+        background-color: teal;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display"></div>
+        <div id="keybord">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="black">+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div class="black">-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div class="black">*</div>
+            <div id="red">C</div>
+            <div>0</div>
+            <div class="black">=</div>
+            <div class="black">\</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let keys=document.querySelectorAll("#keybord>div")
+let bag="";
+    keys.forEach(function(ele){
+        ele.addEventListener("click",myCal);
+    });
+
+    function myCal(event){
+        let targetNumber=event.target.innerText;
+        if(targetNumber=="C"){
+            document.getElementById("display").innerText="";
+            bag="";
+        }else if(targetNumber=="="){
+            document.getElementById("display").innerText=eval(bag);
+            bag="";
+        }
+        else{
+        bag=bag+targetNumber;
+        document.getElementById("display").innerText=bag;
+        }
+
+    }
+</script>
