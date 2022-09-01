@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body>div{
+            display: flex;
+        }
+        body>div>p{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Nrupul_d3fe3b289a.jpg"/>
+    <div>
+        <p>Likes: <span id="like"></span></p>
+        <p>Dislikes:<span id="dislike"></span></p>
+    </div>
+   
+    <button onClick="likeFun()">Like </button>
+    <button onClick="disLikeFun()">Dislike</button>
+</body>
+</html>
+
+<script>
+    let Like_Count=localStorage.getItem("Like_img")||0;
+    document.querySelector("#like").innerText=Like_Count;
+
+    let DisLike_Count=localStorage.getItem("disLike_img")||0;
+    document.querySelector("#dislike").innerText=DisLike_Count;
+
+    function likeFun(){
+        Like_Count++;
+        document.querySelector("#like").innerText=Like_Count;
+        localStorage.setItem("Like_img",Like_Count);
+
+    }
+    function disLikeFun(){
+        DisLike_Count++;
+        document.querySelector("#dislike").innerText=DisLike_Count;
+        localStorage.setItem("disLike_img",DisLike_Count);
+
+    }
+</script>

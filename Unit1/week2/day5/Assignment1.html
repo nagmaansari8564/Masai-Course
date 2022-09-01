@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body>button{
+           margin-left: 10px     ;
+        }
+    </style>
+</body>
+</html>
+<script>
+             // let btn=document.creatElement("button");
+             //  document.querySelector("body").append(btn);
+         
+        let colorObj=[
+            {name:"Primary" , color:"blue"},
+            {name:"Secondary" , color:"gray"},
+            {name:"Success" , color:"green"},
+            {name:"Danger" , color:"red"},
+            {name:"Warning" , color:"yellow"},
+            {name:"Info" , color:"cyan"},
+            {name:"Light" , color:"whitesmoke"},
+            {name:"Dark" , color:"black"},
+            {name:"Link" , color:"lightblue"}
+        ];
+
+        for(let i=0;i<colorObj.length;i++){
+           // console.log(colorObj[i]);
+            let btn=document.createElement("button");
+            btn.innerText=colorObj[i].name;
+            btn.style.background=colorObj[i].color;
+            document.querySelector("body").append(btn);
+         }
+        
+      
+        
+</script>
