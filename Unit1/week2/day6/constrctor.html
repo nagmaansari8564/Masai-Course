@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Day-2 constructor function</h2>
+    <form onsubmit="addproduct(event)" id="Form">
+        <input type="text" placeholder="Name" id="P_name">
+        <input type="number" placeholder="Price" id="P_price">
+        <input type="Submit">
+    </form>
+</body>
+</html>
+
+<script>
+     
+     function NikiProduct(n,p){
+        let obj={};
+        this.name=n;
+        this.price=p;
+
+        return obj;
+     }
+
+
+    let arr=[];
+ function addproduct(e){
+    e.preventDefault()
+     let Value= document.querySelector("Form");
+     let name=Value.P_name.value;
+     let price=Value.P_price.value;
+     let p1=new NikiProduct(name,price)
+     arr.push(p1);
+     console.log("arr:",arr);
+
+ }
+
+</script>
