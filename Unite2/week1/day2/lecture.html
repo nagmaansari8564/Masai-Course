@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" id="Tex">
+        <input type="text" id="Num">
+        <button onclick="creatproduct()">creat</button>
+    
+</body>
+</html>
+<script>
+    let arr=[];
+       function creatproduct(){
+        let Name=document.getElementById('Tex').value
+       let Price= document.getElementById('Num').value
+         let p1= new nikiproduct(Name,Price)
+         arr.push(p1);
+         console.log(arr);
+
+       }
+       function nikiproduct(n,p){
+        this.name=n;
+        this.price=p;
+       }
+
+</script>

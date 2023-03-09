@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: #131a28;
+      }
+      /* #navbaar{
+            width: 100%;
+            height: 80px;
+            background-color:#131A28 ;
+            position:fixed;
+            top:0px;
+            z-index: 2;
+
+        } */
+
+      #navbar {
+        width: 100%;
+        height: 80px;
+        border: 0px solid red;
+        top: 0px;
+        display: flex;
+        margin: auto;
+        background-color: #141b28;
+        color: #c5cdcb;
+        font-size: 18px;
+        position: fixed;
+        top: 0px;
+        z-index: 2;
+      }
+      #abc {
+        margin: auto;
+        display: flex;
+        height: 90%;
+        width: 40%;
+        border: 0px solid red;
+        margin-left: 40px;
+      }
+      .nag {
+        border: 0px solid red;
+        height: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      #navbar > #abc > .nag > img {
+        width: 80%;
+        margin-bottom: 9%;
+        height: 100%;
+        background-color: #131a28;
+      }
+      #navbar > #abc > .nag:hover {
+        color: white;
+      }
+      #def {
+        height: 90%;
+        width: 40%;
+        margin: auto;
+        border: 0px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 30px;
+      }
+      #def > button {
+        height: 60%;
+        width: 20%;
+        background-color: #141b28;
+        color: #c5cdcb;
+        font-size: 16px;
+        border: none;
+      }
+      #def > a > button {
+        height: 60%;
+        width: 100%;
+        background-color: #141b28;
+        color: #c5cdcb;
+        font-size: 16px;
+        border: none;
+      }
+      #def > button:hover {
+        color: white;
+      }
+      #def > #search_div > img {
+        width: 10%;
+        background-color: #141b28;
+      }
+      #def > #search_div {
+        /* background-color: white; */
+      }
+
+      #carousel {
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        margin-top: 80px;
+      }
+      img {
+        height: 550px;
+        width: 100%;
+      }
+      /* button{
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            border: 2px solid yellow;
+            margin-left: 15px;
+            border-radius: 7px;
+            background-color:beige;
+        } */
+      #container {
+        row-gap: 30px;
+        width: 93%;
+        height: auto;
+        border: 0px solid white;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin: auto;
+        /* gap: 45px; */
+
+        margin-top: 60px;
+      }
+
+      #container > div {
+        margin: auto;
+        transition: transform 0.3s;
+        z-index: 1;
+        width: 80%;
+        display: grid;
+        justify-content: center;
+        justify-content: space-evenly;
+        text-align: center;
+        border: 0px solid white;
+        background-color: teal;
+        margin-bottom: 20px;
+        font-size: 20px;
+        border-radius: 7px;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      }
+      #container div:hover {
+        transform: scale(1.2);
+      }
+      #container div img {
+        width: 100%;
+        height: auto;
+      }
+      #container div p + p {
+        margin-top: -15px;
+      }
+      #loader_div {
+        display: none;
+      }
+
+      #loader_div > img {
+        margin-left: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      /* #container>div:hover{
+            width: 350px;
+            height: 500px;
+
+        } */
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="abc">
+        <div class="nag">
+          <img
+            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+          />
+        </div>
+        <div class="nag"><p>TV</p></div>
+        <div class="nag"><p>Movies</p></div>
+        <div class="nag"><p>Sports</p></div>
+        <div class="nag"><p>Disny+</p></div>
+        <div class="nag"><p>KIDS</p></div>
+      </div>
+      <div id="def">
+        <a href="search.html"><button>search Movies</button></a>
+        <button id="sort-lh" onclick="assSort()">Rating:L-H</button>
+        <button id="sort-hl" onclick="dessSort()">Rating:H-L</button>
+
+        <button>LOGIN</button>
+      </div>
+    </div>
+
+    <div id="carousel"></div>
+
+    <div id="loader_div">
+      <img
+        id="loader_gif"
+        src="https://media2.giphy.com/media/5AtXMjjrTMwvK/giphy.gif?cid=ecf05e478msl4gwcdgatwq00lnogvgna3dn9vmmbhk48nu9a&rid=giphy.gif&ct=s"
+      />
+    </div>
+
+    <div id="container"></div>
+  </body>
+</html>
+<script src="MovAppSlid.js"></script>

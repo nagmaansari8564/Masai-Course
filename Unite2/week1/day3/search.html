@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: #131a28;
+    }
+    #navbaar {
+      display: flex;
+      width: 100%;
+      height: 80px;
+      background-color: #131a28;
+      position: fixed;
+      top: 0px;
+      z-index: 2;
+    }
+    #ghi {
+      width: 20%;
+      height: 85%;
+      border: 0px solid red;
+      margin: 5px;
+      margin-left: 60px;
+    }
+    #jkl {
+      width: 20%;
+      height: 85%;
+      border: 1px solid red;
+      margin: 5px;
+      margin-left: 500px;
+
+      background-color: #141b28;
+      color: #c5cdcb;
+      font-size: 22px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #navbaar > #ghi > img {
+      width: 70%;
+      margin-bottom: 17%;
+      height: 100%;
+      background-color: #131a28;
+    }
+    #carousel {
+      width: 100%;
+      background-color: black;
+      text-align: center;
+      margin-top: 80px;
+      margin-bottom: 50px;
+    }
+    img {
+      height: 550px;
+      width: 100%;
+    }
+    /*
+    #movies{
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 3%;
+        justify-content: center;
+    } */
+
+    #movies {
+      row-gap: 30px;
+      width: 93%;
+      height: auto;
+      border: 0px solid white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      margin: auto;
+      /* gap: 45px; */
+
+      margin-top: 60px;
+    }
+    #movies > div {
+      margin: auto;
+      transition: transform 0.3s;
+      z-index: 1;
+      width: 80%;
+      display: grid;
+      justify-content: center;
+      justify-content: space-evenly;
+      text-align: center;
+      border: 0px solid white;
+      background-color: teal;
+      margin-bottom: 20px;
+      font-size: 20px;
+      border-radius: 7px;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    #movies div:hover {
+      transform: scale(1.2);
+    }
+    #movies div img {
+      width: 100%;
+      height: auto;
+    }
+    #movies div p + p {
+      margin-top: -15px;
+    }
+
+    #loader_div {
+      display: none;
+    }
+    #loader_gif {
+      margin-left: 50%;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
+  <body>
+    <div id="navbaar">
+      <div id="ghi">
+        <img
+          src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+        />
+      </div>
+      <div id="jkl">
+        Search :
+        <input
+          oninput="debounce(searchMovies,1000)"
+          type="text"
+          id="movie_name"
+        />
+      </div>
+    </div>
+
+    <div id="carousel"></div>
+
+    <!-- <div id="navbaar"></div>
+   
+    <div id="carousel"></div> -->
+
+    <!-- we need to loader hear -->
+
+    <div id="loader_div">
+      <img
+        id="loader_gif"
+        src="https://media2.giphy.com/media/5AtXMjjrTMwvK/giphy.gif?cid=ecf05e478msl4gwcdgatwq00lnogvgna3dn9vmmbhk48nu9a&rid=giphy.gif&ct=s"
+      />
+    </div>
+
+    <div id="movies"></div>
+  </body>
+</html>
+<script src="search.js"></script>

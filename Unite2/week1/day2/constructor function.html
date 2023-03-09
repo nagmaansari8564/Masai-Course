@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        
+        #navbar{
+            height: 85px;
+            width: 100%;
+            border: 1px solid red;
+        }
+        #ipt{
+            height: 400px;
+            width: 350px;
+            border: 1px solid red;
+            margin: auto;
+            margin-top: 60px;
+           
+            
+        }
+        input{
+           width: 65%;
+           height: 12%;
+           margin-top: 30px;
+            margin-left: 60px
+        }
+        #butn{
+            width: 300px;
+            height: 50px;
+            border:  1px solid red;
+            margin: auto;
+            margin-top: 30px;
+        }
+        button{
+            width: 30%;
+            height: 35px;
+            font-size: 18px;
+        }
+        #but1{
+            margin-right: 50px;
+            margin-left: 30px;
+        }
+        div>input{
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="ipt">
+        <input type="text" id="ipt1">
+        <input type="text" id="ipt2">
+        <input type="text" id="ipt3">
+        <input type="text" id="ipt4">
+    </div>
+    
+    <div id="butn">
+        <button id="but1" onclick="creatData()">remove</button>
+         <button id="but2"onclick="removeData()">submit</button>
+
+    </div>
+</body>
+</html>
+
+<script>
+    var arr=[];
+        function creatData(){
+           var name=document.querySelector("#ipt1").value
+           var course=document.querySelector("#ipt2").value
+           var unit=document.querySelector("#ipt3").value
+           var Image=document.querySelector("#ipt4").value
+
+           var Value=new fun(name,course,unit,Image);
+           arr.push(Value);
+           console.log(arr);
+
+        }
+        function removeData(){
+
+        }
+        function fun(n,c,u,i){
+            this.Name=n;
+            this.Course=c;
+            this.Unit=u;
+            this.Image=i;
+        }
+</script>

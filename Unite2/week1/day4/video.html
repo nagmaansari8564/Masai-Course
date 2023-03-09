@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #navbar {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        background-color: #ffffff;
+        position: fixed;
+        top: 0px;
+        border: 0px solid red;
+        justify-content: space-between;
+        align-items: center;
+
+        /* z-index: 2; */
+      }
+
+      #navbar > div {
+        display: flex;
+        width: 160px;
+        height: 50px;
+        border: 0px solid red;
+        margin-left: 25px;
+        margin-right: 25px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #navbar > div > img {
+        width: 20px;
+        height: 20px;
+      }
+      #Yhead {
+        margin-left: -0px;
+      }
+      #navbar > #icon2 img {
+        width: 25px;
+        height: 25px;
+      }
+      #navbar > #middle {
+        width: 36%;
+        height: 50px;
+        margin-left: 230px;
+      }
+      #navbar > #middle > #Search_term {
+        height: 80%;
+        width: 500px;
+        border-radius: 30px;
+        font-size: 18px;
+        /* margin-left: 20px; */
+      }
+      #navbar > #middle > button > img {
+        width: 30px;
+        height: 30px;
+        /* margin-left: 5px;
+      margin-right: 5px; */
+        /* border-radius: 20px; */
+      }
+      #navbar > #mic {
+        width: 30px;
+        height: 30px;
+        margin-right: 230px;
+      }
+
+      #container {
+        display: flex;
+        height: 700px;
+      }
+      #video_details {
+        flex: 7;
+      }
+      #recommendations {
+        flex: 3;
+      }
+      div {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="showClickedVideo()">
+    <div id="navbar">
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/128/545/545705.png" />
+
+        <img
+          id="Ytube"
+          style="width: 120px; height: 60px"
+          src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500"
+        />
+        <!-- <h2 id="Yhead">YouTube</h2> -->
+      </div>
+
+      <div id="middle">
+        <input type="text" id="Search_term" />
+        <button id="search_button">
+          <img src="https://cdn-icons-png.flaticon.com/128/622/622669.png" />
+        </button>
+      </div>
+      <div id="mic">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/709/709682.png"
+          alt=""
+        />
+      </div>
+
+      <div id="icon2" style="width: 170px; margin-right: 50px">
+        <img
+          src="https://img.icons8.com/external-anggara-glyph-anggara-putra/2x/external-create-multimedia-anggara-glyph-anggara-putra.png"
+        />
+        <img src="https://cdn-icons-png.flaticon.com/128/2645/2645890.png" />
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/2609/2609282.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="video_details"><h2>video</h2></div>
+      <div id="recommendations"><h2>recommendation</h2></div>
+    </div>
+  </body>
+</html>
+<script src="video.js"></script>

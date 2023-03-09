@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            text-align: center;
+            padding-top: 50px;
+            
+        }
+
+        body div {
+            font-size: 20px;
+            
+        }
+        #winner{
+            display: flex;
+            width: 250px;
+            height: 70px; 
+            border: 0px solid red;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+           
+        }
+        #mem{
+            display: flex;
+            margin: auto;
+            margin-top: 70px;
+            width: 60%;
+            
+            
+           
+        }
+        #mem>div{
+            display: flex;
+            width: 150px;
+            height: 80px;
+            border: 0px solid black;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        }
+        #roll{
+            margin-top: 70px;
+           font-size: 20px;
+            height: 50px;
+           border-radius: 10px;
+           
+           
+           
+        }
+        #roll:hover{
+            background-color: teal;
+        }
+        
+    </style>
+</head>
+<body>
+    
+   <div id="winner">Winner</div>
+   <div id="mem">
+    <div id="member-1">Member A</div>
+    <div id="member-2">Member B</div>
+    <div id="member-3">Member C</div>
+    </div>
+    <button type="submit" id="roll" onclick="myDice()">ROLL THE DICE</button>
+    </div>
+</body>
+</html>
+
+<script>
+      function myDice(){
+        var random = Math.ceil(Math.random() * 6);
+        var random1=Math.ceil(Math.random() * 6);
+        var random2=Math.ceil(Math.random() * 6);
+
+        document.querySelector("#member-1").innerHTML=random;
+        document.querySelector("#member-2").innerHTML=random1;
+        document.querySelector("#member-3").innerHTML=random2;
+
+        if(random===random1 && random===random2 && random1===random2){
+            document.querySelector("#winner").innerText = "Match Draw";
+        }
+
+        // if(random>random1 && random>random2){
+        //     document.querySelector("#member-1").style.background = "green";
+        //     document.querySelector("#winner").innerText = "Winner Member-A";
+        // }
+        // else if(random>random1 && random<randomm2 || random>random2 && random<randomm1){
+        //      document.querySelector("#member-1").style.background = "yellow";
+        // }else if(random==random1 || random==random2){
+        //     document.querySelector("#member-1").style.background = "blue";
+        // }else{
+        //     document.querySelector("#member-1").style.background = "red";
+        // }
+        if (random > random1 && random > random2) {
+            document.querySelector("#member-1").style.background = "green";
+            document.querySelector("#winner").innerText = "Winner Member-A";
+        } else if (random > random1 && random < random2 || random < random1 && random > random2) {
+            document.querySelector("#member-1").style.background = "Yellow";
+        } else if (random == random1 || random == random2) {
+            document.querySelector("#member-1").style.background = "blue";
+        } else {
+            document.querySelector("#member-1").style.background = "red";
+        };
+
+
+        if (random1 > random && random1 > random2) {
+            document.querySelector("#member-2").style.background = "green";
+            document.querySelector("#winner").innerText = "Winner Member-B";
+        } else if (random1 > random && random1 < random2 || random1 < random && random1 > random2) {
+            document.querySelector("#member-2").style.background = "Yellow";
+        } else if (random1 == random || random1 == random2) {
+            document.querySelector("#member-2").style.background = "blue";
+        } else {
+            document.querySelector("#member-2").style.background = "red";
+        };
+
+        
+        if (random2 > random1 && random2 > random) {
+            document.querySelector("#member-3").style.background = "green";
+            document.querySelector("#winner").innerText = "Winner Member-C";
+        } else if (random2 > random1 && random2 < random || random2 < random1 && random2 > random) {
+            document.querySelector("#member-3").style.background = "Yellow";
+        } else if (random2 == random1 || random2 == random) {
+            document.querySelector("#member-3").style.background = "blue";
+        } else {
+            document.querySelector("#member-3").style.background = "red";
+        };
+
+
+        if (random === random1 && random > random2 || random === random2 && random > random1) {
+            document.querySelector("#winner").innerText = "Winner Member-A";
+        }
+        if (random1 === random2 && random1 > random) {
+            document.querySelector("#winner").innerText = "Winner Member-B";
+        }
+      }
+</script>
